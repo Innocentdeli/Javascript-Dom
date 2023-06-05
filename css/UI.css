@@ -1,0 +1,36 @@
+.option_cover{
+    display: none;
+    position: absolute;
+    left: 250px;
+    top: 90px;
+    list-style-type: none;
+    background-color: rgb(173, 170, 170);
+    width: 100px 
+}
+
+.option{
+    font-size: 20px;
+    padding:5px;
+    margin-left: -40px;
+    
+
+}
+
+.option:hover{
+    background-color: red;
+    color: white;
+    
+
+}
+
+.menu{
+    border: 3px solid hotpink;
+    padding: 5px;
+}
+
+.circle{
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

@@ -1,0 +1,122 @@
+#field{
+    width:200px;
+    height:150px;
+    border: 10px solid black;
+    background-color: #00FF00;
+    position: relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+#ball{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    transition: all 1s;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.menu .title{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu .title::before{
+    content: '▶';
+    font-size: 80%;
+    color: green;
+}
+
+.rarr{
+    font-size: 80%;
+    color: green;
+}
+
+ .darr{
+    font-size: 80%;
+    color: green;
+    display: none;
+}
+
+.menu.open .title::before{
+    content: '▼'
+}
+
+.menu.open ul{
+    display: block;
+}
+
+
+body{
+    padding: 10px
+}
+
+.carousel{
+    position: relative;
+    width: 398px;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #eee;
+}
+
+.carousel img{
+    width: 130px;
+    height: 130px;
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    /* top: 60px; */
+    padding:0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+}
+
+.arrow.focus{
+    outline: none;
+}
+
+.arrow:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.prev{
+    left: 7px;
+    top: 60px
+}
+
+.next{
+    right: 7px;
+    top: 60px;
+}
+
+.gallery ul{
+    height: 130px;
+    width: 9999px;
+    margin:0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    font-size:0;
+}
+
+.gallery li{
+    display: inline-block;
+}
+

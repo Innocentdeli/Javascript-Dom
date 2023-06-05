@@ -1,0 +1,21 @@
+/* body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.alert{
+    padding: 15px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    color: #3c763d;
+    background-color: #dff0d8;
+    width: 50vh;
+    text-align: center;
+
+} */
+
+.loading{
+    background-color: purple;
+    border: 10px dashed peachpuff;
+}

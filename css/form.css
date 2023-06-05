@@ -1,0 +1,13 @@
+body{
+    background-color: aquamarine;
+}
+
+.form{
+    display:block;
+    margin-bottom: 10px;
+    padding:10px;
+}
+
+.form:hover{
+    background-color: peachpuff;
+}

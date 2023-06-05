@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(226, 213, 213);
+}
+
+.btn {
+    cursor: pointer;
+    width: 200px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: rgb(81, 81, 227);
+    color: white;
+}

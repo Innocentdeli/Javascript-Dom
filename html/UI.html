@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI EVENTS</title>
+    <link rel="stylesheet" href="../css/UI.css">
+</head>
+<body onload="loaded()">
+    <div 
+    style="width:1000px; 
+    height:600px;background-color: hotpink;" 
+    id="mousemoves">
+    <div class="circle" id="round"></div>
+
+    </div>
+    <h3 id="mo">MouseOver</h3>
+    <h3 id='dblc'>Double click me</h3>
+    <h3 id="context" class="menu">Right click for more option</h3>
+    <ul id="opts" class="option_cover">
+        <li class="option">I</li>
+        <li class="option">Love</li>
+        <li class="option">Coding</li>
+        <li class="option">24/7</li>
+    </ul>
+
+    <button id="btn">Alt+SHift+Click on me!</button>
+    <input type="text" 
+    onmousemove="this.value=event.clientX+':'+event.clientY"
+     value="Mouse over me pls">
+
+     <div  oncopy="alert('Coping forbidden!'); return false">
+        Dear user,
+        copying of this content is forbidden for you.
+        If you know JS or HTML, then you can get everything from the page source. 
+        Thanks...
+     </div>
+     <br>
+     <input type="text" onchange="alert(this.value)" />
+     <input type="button" value="Button>" />
+
+     <input type="text" id="input" /> oninput: <span id="result"></span>
+     
+     <form onsubmit="alert('submit!'); return false">
+        First: Enter in the input field <input type="text" value="text"><br>
+        Second: Click "submit": <input type="submit" value="Submit">
+     </form>
+
+     <script>
+        input.oninput = function(){
+            result.innerHTML = input.value
+        }
+
+        function loaded(){
+            alert('Done Loading')
+        }
+     </script>
+    <script src="../js/UI.js"></script>
+</body>
+</html>

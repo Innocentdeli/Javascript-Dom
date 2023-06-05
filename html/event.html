@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="../css/event.css">
+</head>
+<body style="height:2000px">
+
+    <div class="carousel" id="carousel">
+        <button class="arrow prev">⇦</button>
+        <div class="gallery">
+            <ul>
+                <li><img src="../image/1.png" alt=""></li>
+                <li><img src="../image/2.png" alt=""></li>
+                <li><img src="../image/3.png" alt=""></li>
+                <li><img src="../image/4.png" alt=""></li>
+                <li><img src="../image/5.png" alt=""></li>
+                <li><img src="../image/6.png" alt=""></li>
+                <li><img src="../image/7.png" alt=""></li>
+                <li><img src="../image/8.png" alt=""></li>
+                <li><img src="../image/9.png" alt=""></li>
+                <li><img src="../image/10.png" alt=""></li>
+
+            </ul>
+        </div>
+        <button class="arrow next">⇨</button>
+    </div>
+
+    <h3>Click on a field to move the ball there</h3>
+    <br>
+
+    <div id="field">
+        <img src="../image/ball.svg" alt="ball" id="ball">..............
+        ......................................................
+        ......................................................
+        ......................................................
+        ......................................................
+        ......................................................
+        ......................................................
+        ......................................................
+        ......................................................
+        ......................................................
+        ......................................................
+        ......................................................
+    </div>
+
+    <div id="sweeties" class="menu">
+        <span class="title"><span class="rarr ">&rArr;</span> <span class="darr">&dArr;</span> Sweeties (click me)!</span>
+
+        <ul>
+            <li>Cake</li>
+            <li>Donut</li>
+            <li>Honey</li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        field.onclick = function(event) {
+            let fieldCoords = this.getBoundingClientRect();
+
+            let ballCoords = {
+                top: event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight / 2,
+                left: event.clientX - fieldCoords.left - field.clientLeft - ball.clientWidth / 2
+            };
+
+            if(ballCoords.top < 0) ballCoords.top = 0;
+
+            if (ballCoords.left < 0) ballCoords.left = 0
+
+            if(ballCoords.left + ball.clientWidth > field.clientWidth){
+                ballCoords.left = field.clientWidth - ball.clientWidth;
+            }
+
+            
+            if(ballCoords.left + ball.clientHeight > field.clientHeight){
+                ballCoords.left = field.clientHeight - ball.clientHeight;
+            }
+
+            ball.style.left = ballCoords.left + 'px';
+            ball.style.top = ballCoords.top + 'px';
+        }
+    </script>
+
+    <script src="../js/event.js"></script>
+</body>
+</html>
